@@ -1,0 +1,12 @@
+# 빌드 산출물
+Assemblies/
+Source/obj/
+Source/bin/
+obj/
+bin/
+
+# 로컬/에디터
+.vs/
+*.user
+*.suo
+.DS_Store
