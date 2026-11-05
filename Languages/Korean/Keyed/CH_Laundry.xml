@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- 화면에 코드가 직접 쓰는 문자열. def 라벨·설명은 DefInjected 에 있다. -->
+  <CH_Laundry_Status>세탁: {0}</CH_Laundry_Status>
+  <CH_Laundry_Ready>가동 준비됨</CH_Laundry_Ready>
+  <CH_Laundry_NoPower>전력 없음</CH_Laundry_NoPower>
+  <CH_Laundry_NeedWater>물 필요</CH_Laundry_NeedWater>
+
+  <CH_WorkGiver_WashClothing>빨래하기</CH_WorkGiver_WashClothing>
+  <CH_Job_WashClothing>빨래하는 중</CH_Job_WashClothing>
+
+  <CH_Building_WashTub>손빨래통</CH_Building_WashTub>
+  <CH_Building_WashTub_Desc>손으로 옷을 주무르는 나무 통. 연구 없이 쓸 수 있지만 느리고, 제대로 된 세탁통을 대신하지는 못한다.</CH_Building_WashTub_Desc>
+
+  <CH_Building_LaundryBasin>세탁통</CH_Building_LaundryBasin>
+  <CH_Building_LaundryBasin_Desc>빨래판과 불림 공간이 있는 제대로 된 세탁통. 손빨래통보다 빠르고 옷에도 덜 무리다.</CH_Building_LaundryBasin_Desc>
+
+  <CH_Building_WashingMachine>세탁기</CH_Building_WashingMachine>
+  <CH_Building_WashingMachine_Desc>전동 드럼 세탁기. 전력·물·비누가 있으면 주기마다 더러운 옷 한 벌을 스스로 세탁한다. 세탁기 옆에 더러운 옷을 놓아 두면 된다.</CH_Building_WashingMachine_Desc>
+
+  <CH_Building_UltraSonicWasher>초음파 세탁기</CH_Building_UltraSonicWasher>
+  <CH_Building_UltraSonicWasher_Desc>문지르지 않고 초음파로 옷속 때를 털어내는 세탁조. 드럼 세탁기의 절반의 물과 절반의 비누를 쓰고, 절반의 시간에 끝난다.</CH_Building_UltraSonicWasher_Desc>
+
+  <CH_Item_Soap>비누</CH_Item_Soap>
+  <CH_Item_Soap_Desc>독한 잿물 비누 한 개비. 비누로 빨면 때가 완전히 빠지지만, 없으면 찌든 때가 남는다.</CH_Item_Soap_Desc>
+
+  <CH_Recipe_MakeSoap>비누 만들기</CH_Recipe_MakeSoap>
+  <CH_Recipe_MakeSoap_Desc>재와 헝겊 조각을 끓여 독한 비누를 만든다.</CH_Recipe_MakeSoap_Desc>
+
+  <CH_Research_Basin>세탁통</CH_Research_Basin>
+  <CH_Research_Basin_Desc>빨래판이 달린 제대로 된 세탁통을 만든다. 손빨래통보다 빨리 불리고 씻을 수 있다.</CH_Research_Basin_Desc>
+
+  <CH_Research_Soap>비누 제조</CH_Research_Soap>
+  <CH_Research_Soap_Desc>재와 헝겊 조각으로 비누를 만든다. 비누는 옷의 기름때를 녹여 내므로, 세탁한 옷이 '덜 더러운' 상태가 아니라 완전히 깨끗해진다.</CH_Research_Soap_Desc>
+
+  <CH_Research_Washer>세탁기</CH_Research_Washer>
+  <CH_Research_Washer_Desc>전력·물·비누가 있는 한 주기마다 스스로 옷을 빨아 주는 전동 드럼 세탁기. 전력이 필요하다.</CH_Research_Washer_Desc>
+
+  <CH_Research_UltraSonic>초음파 세척</CH_Research_UltraSonic>
+  <CH_Research_UltraSonic_Desc>문지르지 않고 초음파로 옷속 때를 털어낸다. 초음파 세탁기는 물과 비누를 절반만 쓰고, 한 번 세탁에 절반의 시간이 걸린다.</CH_Research_UltraSonic_Desc>
+
+  <CH_WasherLoad>내부 {0}/{1}벌</CH_WasherLoad>
+  <CH_NeedWaterAdjacent>물가에만 설치할 수 있습니다.</CH_NeedWaterAdjacent>
+  <CH_Laundry_Running>가동 중</CH_Laundry_Running>
+  <CH_Laundry_Open>열림</CH_Laundry_Open>
+</LanguageData>

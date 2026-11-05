@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CH_InspectString>청결도: {0} ({1})</CH_InspectString>
+  <CH_TipString>청결도: {0} ({1})</CH_TipString>
+  <CH_DescriptionPart>청결도: {0}. 더러워지면 빨거나 갈아입을 때까지 기분이 떨어집니다.</CH_DescriptionPart>
+  <CH_Stage_Clean>깨끗함</CH_Stage_Clean>
+  <CH_Stage_Worn>사용감</CH_Stage_Worn>
+  <CH_Stage_Smelly>냄새남</CH_Stage_Smelly>
+  <CH_Stage_Clammy>찝찝함</CH_Stage_Clammy>
+  <CH_Stage_Filthy>매우 더러움</CH_Stage_Filthy>
+
+  <CH_Settings_FilthPerDay>하루 오염도: {0}%</CH_Settings_FilthPerDay>
+  <CH_Settings_ChangeThreshold>자동 갈아입기 임계: {0}%</CH_Settings_ChangeThreshold>
+  <CH_Settings_DurabilityLoss>세탁 1회당 내구도 손실: {0}%</CH_Settings_DurabilityLoss>
+  <CH_Settings_MoodScale>무드 페널티 배율: {0}</CH_Settings_MoodScale>
+  <CH_Settings_MoodEnabled>위생 무드 효과 사용</CH_Settings_MoodEnabled>
+  <CH_Settings_MoodEnabledTip>깨끗한 옷은 벌마다 +1(상한까지 중첩). 더러운 옷은 가장 더러운 한 벌 기준으로 디버프 1개만 적용된다.</CH_Settings_MoodEnabledTip>
+  <CH_Settings_WaterMode>물 공급</CH_Settings_WaterMode>
+  <CH_WaterMode_Auto>자동 (Dubs Bad Hygiene 있으면 사용)</CH_WaterMode_Auto>
+  <CH_WaterMode_NoWater>항상 물 없이 세탁</CH_WaterMode_NoWater>
+  <CH_WaterMode_RequireWater>물 필요</CH_WaterMode_RequireWater>
+</LanguageData>

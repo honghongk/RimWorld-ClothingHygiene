@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    코어 추상 부모(ApparelNoQualityBase)에만 붙인다.
+    RimWorld 는 XML 패치를 상속 해석 전에 적용하므로, 여기 붙이면 ApparelBase 를 거치는
+    모든 의복(코어·DLC·대부분의 모드)이 comp 를 상속받는다.
+    개별 ThingDef 에도 붙이면 (부모 + 자기 comps) 중복 comp 가 되어 오류가 난다.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="ApparelNoQualityBase"]/comps</xpath>
+    <value>
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_ClothingHygiene" />
+    </value>
+  </Operation>
+</Patch>

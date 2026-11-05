@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    M6 갈아입기 job giver 를 Humanlike 폰의 사고 트리에 넣는다.
+
+    왜 Humanlike.xml 의 콜론니스트 블록이 아니라 MainColonistBehaviorCore 인가:
+      Humanlike 트리 최상위(ThinkNode_Priority)는 순서가 고정이고, 식사·수면은
+      MainColonistBehaviorCore 서브트리 안의 ThinkNode_PrioritySorter 에 들어 있다.
+      최상위에 넣으면 식사·수면보다 무조건 앞선다.
+      MainColonistBehaviorCore 의 정렬기는 자식의 GetPriority 로만 순위를 정하고
+      목록 순서는 무시하므로, 여기에 붙이고 우선순위는 JobGiver_ChangeClothing.GetPriority 가
+      직접 돌려준다(작업 5.5 위, 식사 9.5·수면 아래 → 5.6).
+
+    왜 PatchOperationAdd(말미 추가) 인가:
+      정렬기에서 목록 순서는 의미가 없으므로, 기존 <li> 를 하나도 건드리지 않는 말미 추가가
+      다른 모드의 apparel/think 노드를 깨뜨릴 위험이 가장 낮다. 노드 이름에 의존하지 않는다.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThinkTreeDef[defName="MainColonistBehaviorCore"]/thinkRoot/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes</xpath>
+    <value>
+      <li Class="ClothingHygiene.Infrastructure.JobGiver_ChangeClothing" />
+    </value>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    세탁 건물. 공통으로 CompProperties_LaundryStation 을 붙인다.
+    - cycleTicks = 0  : 폰이 작업하는 수동 세탁대(WorkGiver_WashClothing)
+    - cycleTicks > 0  : 폰 없이 도는 자동 세탁기(Building_LaundryMachine)
+    텍스처는 아직 바닐라 것을 빌려 쓴 임시 그래픽이다.
+  -->
+
+  <!-- ===================== 손빨래통 (연구 불필요) ===================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CH_WashTub</defName>
+    <label>wash tub</label>
+    <description>A wooden tub for scrubbing clothes by hand. Anyone can use it without research, but it is slow and no substitute for a proper laundry basin.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/TableButcher</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>50</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2100</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <comps>
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_LaundryStation">
+        <workAmount>1800</workAmount>
+        <waterUnits>1</waterUnits>
+        <soapUnits>1</soapUnits>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===================== 세탁통 (중세) ===================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CH_LaundryBasin</defName>
+    <label>laundry basin</label>
+    <description>A proper basin with a scrubbing board and room to soak several garments. Faster than a hand tub and easier on the fabric.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/ToolCabinet</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>50</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1400</WorkToBuild>
+      <Mass>18</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <size>(2,1)</size>
+    <costList>
+      <WoodLog>70</WoodLog>
+      <Steel>30</Steel>
+    </costList>
+    <researchPrerequisites>
+      <li>ClothingHygiene_Basin</li>
+    </researchPrerequisites>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2101</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <comps>
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_LaundryStation">
+        <workAmount>1100</workAmount>
+        <waterUnits>1</waterUnits>
+        <soapUnits>1</soapUnits>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===================== 세탁기 (산업, 전력) ===================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CH_WashingMachine</defName>
+    <label>washing machine</label>
+    <description>An electric drum washer. It washes one dirty garment every cycle on its own as long as it has power, water and soap. Leave dirty clothes next to it.</description>
+    <thingClass>ClothingHygiene.Infrastructure.Building_LaundryMachine</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/TableMachining</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>50</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>55</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <researchPrerequisites>
+      <li>Electricity</li>
+      <li>ClothingHygiene_Washer</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2102</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>300</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_LaundryStation">
+        <cycleTicks>900</cycleTicks>
+        <startDelayTicks>900</startDelayTicks>
+        <capacity>5</capacity>
+        <waterUnits>2</waterUnits>
+        <soapUnits>1</soapUnits>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===================== 초음파 세탁기 (우주) ===================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CH_UltraSonicWasher</defName>
+    <label>ultrasonic washer</label>
+    <description>A sonic cleaning tank that shakes dirt out of fabric without scrubbing. Uses half the water and half the soap of a drum washer, and finishes in half the time.</description>
+    <thingClass>ClothingHygiene.Infrastructure.Building_LaundryMachine</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/ElectricSmelter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <fillPercent>0.5</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>50</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <WorkToBuild>3600</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <Steel>160</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <researchPrerequisites>
+      <li>ClothingHygiene_UltraSonic</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2103</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_LaundryStation">
+        <cycleTicks>450</cycleTicks>
+        <startDelayTicks>450</startDelayTicks>
+        <capacity>5</capacity>
+        <waterUnits>1</waterUnits>
+        <soapUnits>0.5</soapUnits>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===================== 물가 세탁 자리 (건물 없이 강·호수에서) ===================== -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CH_WashSpot</defName>
+    <label>water-side wash spot</label>
+    <description>Kneel at the water and scrub a garment by hand. Needs no basin, but it is slow and you must place it next to a river, lake or pond.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/TableButcher</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.3</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>30</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <placeWorkers>
+      <li>ClothingHygiene.Infrastructure.PlaceWorker_WaterEdge</li>
+    </placeWorkers>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2099</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <comps>
+      <li Class="ClothingHygiene.Infrastructure.CompProperties_LaundryStation">
+        <workAmount>2400</workAmount>
+        <waterUnits>0</waterUnits>
+        <soapUnits>1</soapUnits>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ===================== 비누 ===================== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CH_Soap</defName>
+    <label>soap</label>
+    <description>A bar of harsh lye soap. Washing a garment with soap lifts the dirt out completely; without it, some grime always stays behind.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Medicine/MedicineIndustrial</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+      <color>(235,235,220)</color>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+
+</Defs>

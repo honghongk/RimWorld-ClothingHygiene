@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CH_InspectString>Cleanliness: {0} ({1})</CH_InspectString>
+  <CH_TipString>Cleanliness: {0} ({1})</CH_TipString>
+  <CH_DescriptionPart>Cleanliness: {0}. Dirty clothes give a mood penalty until washed or replaced.</CH_DescriptionPart>
+  <CH_Stage_Clean>clean</CH_Stage_Clean>
+  <CH_Stage_Worn>worn</CH_Stage_Worn>
+  <CH_Stage_Smelly>smelly</CH_Stage_Smelly>
+  <CH_Stage_Clammy>clammy</CH_Stage_Clammy>
+  <CH_Stage_Filthy>filthy</CH_Stage_Filthy>
+
+  <CH_Settings_FilthPerDay>Filth accumulated per day: {0}%</CH_Settings_FilthPerDay>
+  <CH_Settings_ChangeThreshold>Auto-change threshold: {0}%</CH_Settings_ChangeThreshold>
+  <CH_Settings_DurabilityLoss>Durability loss per wash: {0}%</CH_Settings_DurabilityLoss>
+  <CH_Settings_MoodScale>Mood penalty scale: {0}</CH_Settings_MoodScale>
+  <CH_Settings_MoodEnabled>Enable hygiene mood effects</CH_Settings_MoodEnabled>
+  <CH_Settings_MoodEnabledTip>Clean garments give +1 each up to the cap. Dirty garments give a single debuff based on the dirtiest one.</CH_Settings_MoodEnabledTip>
+  <CH_Settings_WaterMode>Water source</CH_Settings_WaterMode>
+  <CH_WaterMode_Auto>Auto (use Dubs Bad Hygiene if present)</CH_WaterMode_Auto>
+  <CH_WaterMode_NoWater>Always wash without water</CH_WaterMode_NoWater>
+  <CH_WaterMode_RequireWater>Require water</CH_WaterMode_RequireWater>
+</LanguageData>

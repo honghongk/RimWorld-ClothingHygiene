@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: clean clothes -->
+  <CH_Clean.stages.0.label>깨끗한 옷</CH_Clean.stages.0.label>
+  <!-- EN: My clothes are clean and fresh. Small thing, but it puts me in a better mood. -->
+  <CH_Clean.stages.0.description>옷이 깨끗하고 산뜻하다. 사소한 일이지만 기분이 좋아진다.</CH_Clean.stages.0.description>
+
+  <!-- EN: smelly clothes -->
+  <CH_Smelly.stages.0.label>냄새 나는 옷</CH_Smelly.stages.0.label>
+  <!-- EN: My clothes are starting to smell. I should change into something clean. -->
+  <CH_Smelly.stages.0.description>옷에서 냄새가 나기 시작했다. 깨끗한 옷으로 갈아입어야겠다.</CH_Smelly.stages.0.description>
+
+  <!-- EN: clammy clothes -->
+  <CH_Clammy.stages.0.label>축축한 옷</CH_Clammy.stages.0.label>
+  <!-- EN: My clothes are damp and cling to my skin. I can't stand wearing them any longer. -->
+  <CH_Clammy.stages.0.description>옷이 축축해서 살에 달라붙는다. 더는 못 입겠다.</CH_Clammy.stages.0.description>
+
+  <!-- EN: filthy clothes -->
+  <CH_Filthy.stages.0.label>엄청 더러운 옷</CH_Filthy.stages.0.label>
+  <!-- EN: These clothes are caked with grime. I feel disgusting wearing them. -->
+  <CH_Filthy.stages.0.description>옷에 때가 덕지덕지 붙었다. 입고 있으면 역겹다.</CH_Filthy.stages.0.description>
+
+</LanguageData>

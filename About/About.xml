@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Clothing Hygiene</name>
+  <author>옷홍홍</author>
+  <packageId>honghongk.clothinghygiene</packageId>
+  <modVersion>0.3.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <description>Worn clothing accumulates filth over time. Dirty clothes give mood penalties until you wash them or change into something clean. Filth is stored per garment and is fully independent of hit points and the vanilla tainted flag.
+
+- Per-garment filth, saved with the item (it follows clothes into storage or onto another pawn)
+- Cleanliness stages: clean (+1 each, stacks to +5) / worn / smelly (-3) / clammy (-6) / filthy (-10); debuffs never stack
+- Fouling rate depends on activity (sleep/labour/combat) and temperature
+- Hand washing needs no research; basin, soap, washing machine and ultrasonic washer unlock through research
+- Water from Dubs Bad Hygiene when installed (soft dependency - works without it)
+- Pawns change into clean spare clothes on their own when their outfit gets too dirty
+
+한국어: 입고 있는 옷이 시간이 지나면 더러워지고, 더러운 옷은 기분을 떨어뜨립니다. 빨래하거나 깨끗한 옷으로 갈아입어야 해결됩니다. 바닐라의 유품(Tainted)·내구도와는 완전히 별개입니다.
+
+Dubs Bad Hygiene 는 선택 사항입니다(설치 시 배관 물을 사용).</description>
+</ModMetaData>

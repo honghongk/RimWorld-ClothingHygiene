@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <ClothingHygiene_Basin.label>세탁통</ClothingHygiene_Basin.label>
+  <ClothingHygiene_Basin.description>빨래판이 달린 제대로 된 세탁통을 만든다. 손빨래통보다 빨리 불리고 씻을 수 있다.</ClothingHygiene_Basin.description>
+
+  <ClothingHygiene_Soap.label>비누 제조</ClothingHygiene_Soap.label>
+  <ClothingHygiene_Soap.description>재와 헝겊 조각으로 비누를 만든다. 비누는 옷의 기름때를 녹여 내므로, 세탁한 옷이 '덜 더러운' 상태가 아니라 완전히 깨끗해진다.</ClothingHygiene_Soap.description>
+
+  <ClothingHygiene_Washer.label>세탁기</ClothingHygiene_Washer.label>
+  <ClothingHygiene_Washer.description>전력·물·비누가 있는 한 주기마다 스스로 옷을 빨아 주는 전동 드럼 세탁기. 전력이 필요하다.</ClothingHygiene_Washer.description>
+
+  <ClothingHygiene_UltraSonic.label>초음파 세척</ClothingHygiene_UltraSonic.label>
+  <ClothingHygiene_UltraSonic.description>문지르지 않고 초음파로 옷속 때를 털어낸다. 초음파 세탁기는 물과 비누를 절반만 쓰고, 한 번 세탁에 절반의 시간이 걸린다.</ClothingHygiene_UltraSonic.description>
+
+</LanguageData>

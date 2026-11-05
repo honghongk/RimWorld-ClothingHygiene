@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!--
+    무드 thought 4종의 표시 문자열. ThoughtDef 의 stages[*].label 은 Keyed 가 아니라
+    DefInjected 로 번역된다(게임 코드 확인: DefInjectionPackage 에 Keyed 폴백 없음,
+    ThoughtStage.label 은 [MustTranslate]). 실제 인게임 번역 정본은
+    Languages/<lang>/DefInjected/ThoughtDef/ThoughtDefs_Hygiene.xml 이다.
+    이 파일의 키는 같은 문구의 키드 사본으로, 다른 UI/문서에서 재사용할 수 있게 둔다.
+  -->
+  <CH_Mood_Clean>clean clothes</CH_Mood_Clean>
+  <CH_Mood_Smelly>smelly clothes</CH_Mood_Smelly>
+  <CH_Mood_Clammy>clammy clothes</CH_Mood_Clammy>
+  <CH_Mood_Filthy>filthy clothes</CH_Mood_Filthy>
+</LanguageData>

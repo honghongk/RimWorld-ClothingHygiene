@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 비누 생산. 세탁 자체는 비누 없이도 되지만, 비누가 있어야 오염도가 완전히 0 이 된다. -->
+  <RecipeDef>
+    <defName>CH_MakeSoap</defName>
+    <label>make soap</label>
+    <description>Boil wood ash with cloth scraps and pour the result into bars of harsh soap.</description>
+    <jobString>Making soap.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>900</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+        <li>Cloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CH_Soap>2</CH_Soap>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <researchPrerequisite>ClothingHygiene_Soap</researchPrerequisite>
+    <workSkill>Crafting</workSkill>
+    <skillRequirements>
+      <Crafting>2</Crafting>
+    </skillRequirements>
+    <displayPriority>0</displayPriority>
+  </RecipeDef>
+
+</Defs>

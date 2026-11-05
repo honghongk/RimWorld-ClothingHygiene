@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!--
+    같은 이유로 인게임 번역 정본은 Languages/Korean/DefInjected/ThoughtDef/ThoughtDefs_Hygiene.xml 이다.
+  -->
+  <CH_Mood_Clean>깨끗한 옷</CH_Mood_Clean>
+  <CH_Mood_Smelly>냄새 나는 옷</CH_Mood_Smelly>
+  <CH_Mood_Clammy>축축한 옷</CH_Mood_Clammy>
+  <CH_Mood_Filthy>엄청 더러운 옷</CH_Mood_Filthy>
+</LanguageData>

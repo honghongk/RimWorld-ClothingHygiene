@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- RimWorld 1.6 = Unity Mono. net472 가 정본이다. net6/8/10 으로 빌드하면 게임이 로드하지 못한다. -->
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ClothingHygiene</AssemblyName>
+    <RootNamespace>ClothingHygiene</RootNamespace>
+
+    <OutputPath>$(MSBuildThisFileDirectory)../Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <NoWarn>$(NoWarn);CS0649</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- 이 머신(게임 1.6.4871 rev595) 기준. 게임 설치가 바뀌면 이 두 줄만 고친다. -->
+    <RimWorldContent>/Users/hong/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app</RimWorldContent>
+    <RimWorldManaged>$(RimWorldContent)/Contents/Resources/Data/Managed</RimWorldManaged>
+    <HarmonyDir>/Users/hong/Library/Application Support/Steam/steamapps/workshop/content/294100/2009463077/1.6/Assemblies</HarmonyDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- macOS 에 .NET Framework 참조 어셈블리가 없어서 이 패키지가 mscorlib 4.7.2 를 공급한다. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldManaged)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldManaged)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldManaged)/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RimWorldManaged)/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Harmony: 아이콘 오버레이 패치에 필요. 게임 쪽 brrainz.harmony 가 로드한 0Harmony.dll 을 참조한다(동봉 금지). -->
+  <ItemGroup Condition="'$(HarmonyDir)' != ''">
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDir)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

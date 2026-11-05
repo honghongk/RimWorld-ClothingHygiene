@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <ClothingHygiene_Basin.label>laundry basin</ClothingHygiene_Basin.label>
+  <ClothingHygiene_Basin.description>Build a proper laundry basin with a scrubbing board, so garments can be soaked and washed faster than in a hand tub.</ClothingHygiene_Basin.description>
+
+  <ClothingHygiene_Soap.label>soap making</ClothingHygiene_Soap.label>
+  <ClothingHygiene_Soap.description>Render wood ash and cloth scraps into bars of soap. Soap lifts grease out of fabric, so a washed garment comes out completely clean instead of merely less dirty.</ClothingHygiene_Soap.description>
+
+  <ClothingHygiene_Washer.label>washing machine</ClothingHygiene_Washer.label>
+  <ClothingHygiene_Washer.description>An electric drum washer that scrubs a garment on its own, cycle after cycle, as long as it has power, water and soap. Requires electricity.</ClothingHygiene_Washer.description>
+
+  <ClothingHygiene_UltraSonic.label>ultrasonic cleaning</ClothingHygiene_UltraSonic.label>
+  <ClothingHygiene_UltraSonic.description>Sonic agitation strips dirt out of fabric without scrubbing. An ultrasonic washer uses half the water and half the soap, and finishes each load in half the time.</ClothingHygiene_UltraSonic.description>
+
+</LanguageData>

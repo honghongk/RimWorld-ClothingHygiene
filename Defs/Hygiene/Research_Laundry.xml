@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 손빨래는 연구 없이 가능하다. 연구는 "더 편한 수단"을 여는 계단이다. -->
+
+  <!--
+    전용 연구 탭. 바닐라 Main 탭은 다른 모드 때문에 노드가 171개 규모로 비대해져(YART 로그 실측)
+    우리 4개가 사실상 안 보인다. 자기 탭을 가지면 YART·바닐라 모두에서 바로 찾을 수 있다.
+  -->
+  <ResearchTabDef>
+    <defName>ClothingHygiene</defName>
+    <label>clothing hygiene</label>
+    <generalTitle>Clothing hygiene</generalTitle>
+    <generalDescription>Keeping worn clothes clean - washing, soap and machines.</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>ClothingHygiene_Basin</defName>
+    <label>laundry basin</label>
+    <description>Build a proper laundry basin with a scrubbing board, so garments can be soaked and washed faster than in a hand tub.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>ClothingHygiene</tab>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ClothingHygiene_Soap</defName>
+    <label>soap making</label>
+    <description>Render wood ash and cloth scraps into bars of soap. Soap lifts grease out of fabric, so a washed garment comes out completely clean instead of merely less dirty.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ClothingHygiene_Basin</li>
+    </prerequisites>
+    <tab>ClothingHygiene</tab>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ClothingHygiene_Washer</defName>
+    <label>washing machine</label>
+    <description>An electric drum washer that scrubs a garment on its own, cycle after cycle, as long as it has power, water and soap. Requires electricity.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+      <li>ClothingHygiene_Soap</li>
+    </prerequisites>
+    <tab>ClothingHygiene</tab>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>ClothingHygiene_UltraSonic</defName>
+    <label>ultrasonic cleaning</label>
+    <description>Sonic agitation strips dirt out of fabric without scrubbing. An ultrasonic washer uses half the water and half the soap, and finishes each load in half the time.</description>
+    <baseCost>2400</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ClothingHygiene_Washer</li>
+    </prerequisites>
+    <tab>ClothingHygiene</tab>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

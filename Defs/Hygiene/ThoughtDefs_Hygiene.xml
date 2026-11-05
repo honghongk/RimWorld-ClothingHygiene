@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    의복 청결도 → 무드. Def 수치의 정본은 여기이고, 배율(moodPenaltyScale)은 런타임에
+    Thought_Memory.moodPowerFactor 로 곱한다(HygieneMoodComponent).
+    stackedEffectMultiplier 를 1 로 두지 않으면 기본값 0.75 때문에 2벌째부터 효과가 깎여
+    "벌마다 +1, 최대 +5" 가 성립하지 않는다(ThoughtHandler.MoodOffsetOfGroup 확인).
+  -->
+
+  <ThoughtDef>
+    <defName>CH_Clean</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>clean clothes</label>
+        <description>My clothes are clean and fresh. Small thing, but it puts me in a better mood.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CH_Smelly</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>smelly clothes</label>
+        <description>My clothes are starting to smell. I should change into something clean.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CH_Clammy</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>clammy clothes</label>
+        <description>My clothes are damp and cling to my skin. I can't stand wearing them any longer.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CH_Filthy</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>filthy clothes</label>
+        <description>These clothes are caked with grime. I feel disgusting wearing them.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

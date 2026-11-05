@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>CH_WashClothing</defName>
+    <driverClass>ClothingHygiene.Infrastructure.JobDriver_WashClothing</driverClass>
+    <reportString>washing clothing.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+    <suspendable>true</suspendable>
+  </JobDef>
+
+  <JobDef>
+    <defName>CH_LoadWasher</defName>
+    <driverClass>ClothingHygiene.Infrastructure.JobDriver_LoadWasher</driverClass>
+    <reportString>loading the washer.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+    <suspendable>true</suspendable>
+  </JobDef>
+
+  <JobDef>
+    <defName>CH_UnloadWasher</defName>
+    <driverClass>ClothingHygiene.Infrastructure.JobDriver_UnloadWasher</driverClass>
+    <reportString>unloading the washer.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+    <suspendable>true</suspendable>
+  </JobDef>
+
+</Defs>

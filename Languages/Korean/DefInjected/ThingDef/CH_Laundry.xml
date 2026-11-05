@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <CH_WashTub.label>손빨래통</CH_WashTub.label>
+  <CH_WashTub.description>손으로 옷을 주무르는 나무 통. 연구 없이 쓸 수 있지만 느리고, 제대로 된 세탁통을 대신하지는 못한다.</CH_WashTub.description>
+
+  <CH_LaundryBasin.label>세탁통</CH_LaundryBasin.label>
+  <CH_LaundryBasin.description>빨래판과 불림 공간이 있는 제대로 된 세탁통. 손빨래통보다 빠르고 옷에도 덜 무리다.</CH_LaundryBasin.description>
+
+  <CH_WashingMachine.label>세탁기</CH_WashingMachine.label>
+  <CH_WashingMachine.description>전동 드럼 세탁기. 전력·물·비누가 있으면 주기마다 더러운 옷 한 벌을 스스로 세탁한다. 세탁기 옆에 더러운 옷을 놓아 두면 된다.</CH_WashingMachine.description>
+
+  <CH_UltraSonicWasher.label>초음파 세탁기</CH_UltraSonicWasher.label>
+  <CH_UltraSonicWasher.description>문지르지 않고 초음파로 옷속 때를 털어내는 세탁조. 드럼 세탁기의 절반의 물과 절반의 비누를 쓰고, 절반의 시간에 끝난다.</CH_UltraSonicWasher.description>
+
+  <CH_Soap.label>비누</CH_Soap.label>
+  <CH_Soap.description>독한 잿물 비누 한 개비. 비누로 빨면 때가 완전히 빠지지만, 없으면 찌든 때가 남는다.</CH_Soap.description>
+
+</LanguageData>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkGiverDef>
+    <defName>CH_WashClothing</defName>
+    <label>wash clothing</label>
+    <giverClass>ClothingHygiene.Infrastructure.WorkGiver_WashClothing</giverClass>
+    <workType>Cleaning</workType>
+    <verb>wash</verb>
+    <gerund>washing</gerund>
+    <priorityInType>8</priorityInType>
+    <scanThings>true</scanThings>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>CH_LoadWasher</defName>
+    <label>load washing machine</label>
+    <giverClass>ClothingHygiene.Infrastructure.WorkGiver_LoadWasher</giverClass>
+    <workType>Hauling</workType>
+    <verb>load</verb>
+    <gerund>loading</gerund>
+    <priorityInType>5</priorityInType>
+    <scanThings>true</scanThings>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>CH_UnloadWasher</defName>
+    <label>unload washing machine</label>
+    <giverClass>ClothingHygiene.Infrastructure.WorkGiver_UnloadWasher</giverClass>
+    <workType>Hauling</workType>
+    <verb>unload</verb>
+    <gerund>unloading</gerund>
+    <priorityInType>4</priorityInType>
+    <scanThings>true</scanThings>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <CH_WashTub.label>wash tub</CH_WashTub.label>
+  <CH_WashTub.description>A wooden tub for scrubbing clothes by hand. Anyone can use it without research, but it is slow and no substitute for a proper laundry basin.</CH_WashTub.description>
+
+  <CH_LaundryBasin.label>laundry basin</CH_LaundryBasin.label>
+  <CH_LaundryBasin.description>A proper basin with a scrubbing board and room to soak several garments. Faster than a hand tub and easier on the fabric.</CH_LaundryBasin.description>
+
+  <CH_WashingMachine.label>washing machine</CH_WashingMachine.label>
+  <CH_WashingMachine.description>An electric drum washer. It washes one dirty garment every cycle on its own as long as it has power, water and soap. Leave dirty clothes next to it.</CH_WashingMachine.description>
+
+  <CH_UltraSonicWasher.label>ultrasonic washer</CH_UltraSonicWasher.label>
+  <CH_UltraSonicWasher.description>A sonic cleaning tank that shakes dirt out of fabric without scrubbing. Uses half the water and half the soap of a drum washer, and finishes in half the time.</CH_UltraSonicWasher.description>
+
+  <CH_Soap.label>soap</CH_Soap.label>
+  <CH_Soap.description>A bar of harsh lye soap. Washing a garment with soap lifts the dirt out completely; without it, some grime always stays behind.</CH_Soap.description>
+
+</LanguageData>

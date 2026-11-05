@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- M6 자동 갈아입기. {0} = 예비복 이름. 기존 키를 덮어쓰지 않는다. -->
+  <CH_JobReport_ChangeClothing>changing into {0}</CH_JobReport_ChangeClothing>
+  <CH_JobReport_ChangeClothing_Generic>changing clothes</CH_JobReport_ChangeClothing_Generic>
+</LanguageData>

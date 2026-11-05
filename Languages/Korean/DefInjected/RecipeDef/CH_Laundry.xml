@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <CH_MakeSoap.label>비누 만들기</CH_MakeSoap.label>
+  <CH_MakeSoap.description>재와 헝겊 조각을 끓여 독한 비누를 만든다.</CH_MakeSoap.description>
+  <CH_MakeSoap.jobString>비누를 만드는 중.</CH_MakeSoap.jobString>
+
+</LanguageData>

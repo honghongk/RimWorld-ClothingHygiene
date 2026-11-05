@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- 화면에 코드가 직접 쓰는 문자열. def 라벨·설명은 DefInjected 에 있다. -->
+  <CH_Laundry_Status>Laundry: {0}</CH_Laundry_Status>
+  <CH_Laundry_Ready>ready</CH_Laundry_Ready>
+  <CH_Laundry_NoPower>no power</CH_Laundry_NoPower>
+  <CH_Laundry_NeedWater>needs water</CH_Laundry_NeedWater>
+
+  <CH_WorkGiver_WashClothing>wash clothing</CH_WorkGiver_WashClothing>
+  <CH_Job_WashClothing>washing clothing</CH_Job_WashClothing>
+
+  <CH_Building_WashTub>wash tub</CH_Building_WashTub>
+  <CH_Building_WashTub_Desc>A wooden tub for scrubbing clothes by hand. Anyone can use it without research, but it is slow and no substitute for a proper laundry basin.</CH_Building_WashTub_Desc>
+
+  <CH_Building_LaundryBasin>laundry basin</CH_Building_LaundryBasin>
+  <CH_Building_LaundryBasin_Desc>A proper basin with a scrubbing board and room to soak several garments. Faster than a hand tub and easier on the fabric.</CH_Building_LaundryBasin_Desc>
+
+  <CH_Building_WashingMachine>washing machine</CH_Building_WashingMachine>
+  <CH_Building_WashingMachine_Desc>An electric drum washer. It washes one dirty garment every cycle on its own as long as it has power, water and soap. Leave dirty clothes next to it.</CH_Building_WashingMachine_Desc>
+
+  <CH_Building_UltraSonicWasher>ultrasonic washer</CH_Building_UltraSonicWasher>
+  <CH_Building_UltraSonicWasher_Desc>A sonic cleaning tank that shakes dirt out of fabric without scrubbing. Uses half the water and half the soap of a drum washer, and finishes in half the time.</CH_Building_UltraSonicWasher_Desc>
+
+  <CH_Item_Soap>soap</CH_Item_Soap>
+  <CH_Item_Soap_Desc>A bar of harsh lye soap. Washing a garment with soap lifts the dirt out completely; without it, some grime always stays behind.</CH_Item_Soap_Desc>
+
+  <CH_Recipe_MakeSoap>make soap</CH_Recipe_MakeSoap>
+  <CH_Recipe_MakeSoap_Desc>Boil wood ash with cloth scraps and pour the result into bars of harsh soap.</CH_Recipe_MakeSoap_Desc>
+
+  <CH_Research_Basin>laundry basin</CH_Research_Basin>
+  <CH_Research_Basin_Desc>Build a proper laundry basin with a scrubbing board, so garments can be soaked and washed faster than in a hand tub.</CH_Research_Basin_Desc>
+
+  <CH_Research_Soap>soap making</CH_Research_Soap>
+  <CH_Research_Soap_Desc>Render wood ash and cloth scraps into bars of soap. Soap lifts grease out of fabric, so a washed garment comes out completely clean instead of merely less dirty.</CH_Research_Soap_Desc>
+
+  <CH_Research_Washer>washing machine</CH_Research_Washer>
+  <CH_Research_Washer_Desc>An electric drum washer that scrubs a garment on its own, cycle after cycle, as long as it has power, water and soap. Requires electricity.</CH_Research_Washer_Desc>
+
+  <CH_Research_UltraSonic>ultrasonic cleaning</CH_Research_UltraSonic>
+  <CH_Research_UltraSonic_Desc>Sonic agitation strips dirt out of fabric without scrubbing. An ultrasonic washer uses half the water and half the soap, and finishes each load in half the time.</CH_Research_UltraSonic_Desc>
+
+  <CH_WasherLoad>{0}/{1} garments inside</CH_WasherLoad>
+  <CH_NeedWaterAdjacent>Must be placed next to water.</CH_NeedWaterAdjacent>
+  <CH_Laundry_Running>running</CH_Laundry_Running>
+  <CH_Laundry_Open>open</CH_Laundry_Open>
+</LanguageData>
