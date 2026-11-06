@@ -33,9 +33,20 @@ namespace ClothingHygiene.Infrastructure
             }
         }
 
+        /// <summary>재질 배율은 재질이 바뀌지 않으므로 첫 접근에서 한 번만 계산해 캐시한다(핫패스 보호).</summary>
+        private float cachedMaterialFactor = -1f;
+
         public float GarmentFactor
         {
-            get { return Props.filthFactor; }
+            get
+            {
+                if (cachedMaterialFactor < 0f)
+                {
+                    cachedMaterialFactor = Props.filthFactor * MaterialFilthFactor.Of(parent);
+                }
+
+                return cachedMaterialFactor;
+            }
         }
 
         public override void PostExposeData()

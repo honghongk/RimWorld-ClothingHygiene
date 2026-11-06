@@ -26,6 +26,22 @@ namespace ClothingHygiene.Domain
             return ActivityFactor[(int)kind];
         }
 
+        /// <summary>바닐라 오물(발에 묻은 Filth)을 지닌 채 돌아다니면 오염이 빨라진다.</summary>
+        public const float CarriedFilthFactor = 1.5f;
+
+        // 재질 계열별 오염 배율. 금속 갑옷은 거의 안 더러워지고, 천은 빨리 더러워진다.
+        private static readonly float[] MaterialFactor = { 1f, 1.3f, 1.1f, 0.6f, 0.5f, 0.25f };
+
+        public static float Material(GarmentMaterial material)
+        {
+            return MaterialFactor[(int)material];
+        }
+
+        public static float CarriedFilth(bool carryingFilth)
+        {
+            return carryingFilth ? CarriedFilthFactor : 1f;
+        }
+
         public static float Temperature(float celsius)
         {
             if (celsius >= HotThreshold)

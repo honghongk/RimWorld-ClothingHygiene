@@ -41,7 +41,8 @@
 | 저장 위치 | 각 의복의 ThingComp(`ch_filth`), 그 아이템의 세이브 노드에 포함 |
 | 독립성 | `hitPoints`·`Tainted` 를 **읽지도 쓰지도 않는다** |
 | 표시 | ① inspect 패널 `청결도: 찝찝함 (74%)` ② 호버 툴팁(`CompTipStringExtra`, 항상) ③ 정보 카드 본문(`GetDescriptionPart`) |
-| comp 부착 | XML 패치(코어 추상 부모) + **런타임 주입**(`ApparelCompInjector`, 코어 부모를 상속하지 않는 모드 의복까지) |
+| comp 부착 | **런타임 주입**(`ApparelCompInjector`) — def 로딩 후 실 의복 def 전체에 부착. XML 패치 없음(중복·제외 제어 불가) |
+| 제외 | `countsAsClothingForNudity=false` 또는 레이어 `Belt` → 의복이 아닌 장비(방패 벨트·유틸리티) |
 
 **"한 벌 = 한 값"이 이 모델의 핵심 제약이다.**
 
@@ -75,7 +76,18 @@
 | 더위(기온 30℃ 이상) | ×1.3 추가 | 환경 |
 | 추위(0℃ 이하) | ×0.7 | 겹겹이 입어 덜 더러움 |
 
-의복계수: 속옷·얇은 옷 ×0.7, 일반 ×1.0, 방한복·판금 ×1.4 (comp props `filthFactor`).
+**재질 계수** — 의복의 stuff 카테고리(바닐라 `Metallic`·`Stony`·`Woody`·`Leathery`·`Fabric`)로 자동 판정하고, 첫 접근에서 한 번만 계산해 캐시한다.
+
+| 재질 계열 | 배율 | 예 |
+|---|---|---|
+| 금속 `Metallic` | **×0.25** | 강철·플라스틸·우라늄 갑옷 |
+| 석재 `Stony` | ×0.5 | 돌 갑주 |
+| 목재 `Woody` | ×0.6 | 나무 방패·목제 |
+| 가죽 `Leathery` | ×1.1 | 가죽 갑옷 |
+| 천 `Fabric` | **×1.3** | 옷·사슬갑 속옷 |
+| 무재질 | ×1.0 | 재질 없는 의복 |
+
+def 단위로 더 세밀하게 조정하려면 comp props `filthFactor`(기본 1.0)를 곱한다.
 
 ### 4.3 단계와 무드
 

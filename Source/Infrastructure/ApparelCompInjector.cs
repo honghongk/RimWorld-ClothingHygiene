@@ -29,6 +29,17 @@ namespace ClothingHygiene.Infrastructure
                     continue;
                 }
 
+                // 의복이 아닌 장비(방패 벨트 등)는 제외한다. 갑옷은 레이어가 OnSkin/Middle/Shell 이라 포함된다.
+                if (def.apparel == null || !def.apparel.countsAsClothingForNudity)
+                {
+                    continue;
+                }
+
+                if (HasLayer(def.apparel, ApparelLayerDefOf.Belt))
+                {
+                    continue;
+                }
+
                 if (def.comps == null || HasHygieneComp(def.comps))
                 {
                     continue;
@@ -42,6 +53,19 @@ namespace ClothingHygiene.Infrastructure
             {
                 Log.Message("[ClothingHygiene] fouling comp attached to " + added + " apparel def(s) via runtime injection");
             }
+        }
+
+        private static bool HasLayer(ApparelProperties apparel, ApparelLayerDef layer)
+        {
+            for (int i = 0; i < apparel.layers.Count; i++)
+            {
+                if (apparel.layers[i] == layer)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static bool HasHygieneComp(List<CompProperties> comps)

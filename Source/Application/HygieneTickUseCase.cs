@@ -5,7 +5,7 @@ namespace ClothingHygiene.Application
     /// <summary>의복 한 벌의 오염 누적 유스케이스. 게임 타입을 모른다(도메인 규칙 조합만).</summary>
     public static class HygieneTickUseCase
     {
-        public static void AccumulateOne(IHygieneState state, float filthPerDayPercent, int deltaTicks, ActivityKind activity, float temperatureCelsius)
+        public static void AccumulateOne(IHygieneState state, float filthPerDayPercent, int deltaTicks, ActivityKind activity, float temperatureCelsius, bool carryingFilth)
         {
             if (state == null || !state.IsWorn)
             {
@@ -15,7 +15,7 @@ namespace ClothingHygiene.Application
             float delta = FilthRates.Delta(
                 filthPerDayPercent,
                 deltaTicks,
-                FilthRates.Activity(activity),
+                FilthRates.Activity(activity) * FilthRates.CarriedFilth(carryingFilth),
                 FilthRates.Temperature(temperatureCelsius),
                 state.GarmentFactor);
 

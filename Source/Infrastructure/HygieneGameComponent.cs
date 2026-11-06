@@ -51,6 +51,8 @@ namespace ClothingHygiene.Infrastructure
                         }
 
                         ActivityKind activity = ActivityReader.Read(pawn);
+                        // 바닐라 Pawn_FilthTracker: 발에 오물을 묻힌 채 돌아다니면 옷이 더 빨리 더러워진다.
+                        bool carryingFilth = pawn.filth != null && pawn.filth.CarriedFilthListForReading.Count > 0;
                         List<Apparel> worn = pawn.apparel.WornApparel;
 
                         for (int k = 0; k < worn.Count; k++)
@@ -59,7 +61,7 @@ namespace ClothingHygiene.Infrastructure
 
                             if (comp != null)
                             {
-                                HygieneTickUseCase.AccumulateOne(comp, settings.filthPerDay, Interval, activity, temperature);
+                                HygieneTickUseCase.AccumulateOne(comp, settings.filthPerDay, Interval, activity, temperature, carryingFilth);
                             }
                         }
                     }
